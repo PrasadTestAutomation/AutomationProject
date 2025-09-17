@@ -1,3 +1,4 @@
+@Register
 Feature: User Registration
   As a new user, I want to create an account, So that I can make purchases
 
@@ -19,9 +20,10 @@ Feature: User Registration
     Then a message about account created should be displayed
     When user clicks on continue button
     Then on homepage "Logged in as prasadindu2" is visible
-    When user clicks on Delete Account button
-    Then user should see account deleted message
-    Then user clicks on continue button
+  #Account deletion is commented because using the above credentials we are logging in testcase 2
+#    When user clicks on Delete Account button
+#    Then user should see account deleted message
+#    Then user clicks on continue button
 
 
 
