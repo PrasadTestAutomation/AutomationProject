@@ -17,5 +17,6 @@ Test Case 1: Register User
 14. Verify that 'ACCOUNT CREATED!' is visible
 15. Click 'Continue' button
 16. Verify that 'Logged in as username' is visible
+#optional
 17. Click 'Delete Account' button
 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
