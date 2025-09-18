@@ -1,3 +1,4 @@
+@login
 Feature: Login Validation
   As a user I should  login with correct credentials
   and I should not login with incorrect credentials
@@ -11,3 +12,8 @@ Feature: Login Validation
     Then user should be able to login successfully
 #    When user clicks on Delete Account button
 #    Then user should see account deleted message
+
+  Scenario: Login with inCorrect credentials
+    When user Enters valid email "incorrect@email.com" and password "incorrectPassword"
+    And clicks on login button
+    Then user should get an error message

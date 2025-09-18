@@ -20,6 +20,7 @@ public class LoginPage {
 
         public static final String LOGIN_INFO = "Login to your account";
         public static final String ACC_DELETED_MSG = "ACCOUNT DELETED!";
+        public static final String LOGIN_ERROR_MSG = "Your email or password is incorrect!";
     }
 
     public void enterEmailPassword(String email,String password)
@@ -40,5 +41,9 @@ public class LoginPage {
         Assert.assertTrue(loginText, "logged In as not present");
     }
 
+    public void validateLoginUsingInvalidCredentials() {
+        String invalidLoginText = loginFactory.getInvalidLoggedInText().getText();
+        Assert.assertEquals(invalidLoginText,LoginPage.Constants.LOGIN_ERROR_MSG,"error message not presen");
+    }
 
 }

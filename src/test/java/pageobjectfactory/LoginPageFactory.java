@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import javax.swing.*;
+
 public class LoginPageFactory {
     WebDriver driver;
 
@@ -28,6 +30,9 @@ public class LoginPageFactory {
     @FindBy(xpath = "//a[contains(text(), 'Logged')]")
     private WebElement loggedInText;
 
+    @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
+    private WebElement loginErrorMsg;
+
     public WebElement getValidateLoginInfo() {
         return validateLoginInfo;
     }
@@ -48,5 +53,9 @@ public class LoginPageFactory {
     public boolean getLoggedInText() {
        boolean loginText =  loggedInText.isDisplayed();
        return loginText;
+    }
+
+    public WebElement getInvalidLoggedInText() {
+        return loginErrorMsg;
     }
 }

@@ -27,4 +27,10 @@ public class LoginSteps {
         System.out.println("user logged in successfullly");
     }
 
+    @Then("user should get an error message")
+    public void userShouldGetAnErrorMessage() {
+        loginpage.validateLoginUsingInvalidCredentials();
+        System.out.println("Incorrect details validated successfully");
+
+    }
 }
