@@ -12,8 +12,12 @@ Feature: Login Validation
     Then user should be able to login successfully
 #    When user clicks on Delete Account button
 #    Then user should see account deleted message
+     When user clicks on logout button
+     Then user should be able to logout successfully
+
 
   Scenario: Login with inCorrect credentials
     When user Enters valid email "incorrect@email.com" and password "incorrectPassword"
     And clicks on login button
     Then user should get an error message
+

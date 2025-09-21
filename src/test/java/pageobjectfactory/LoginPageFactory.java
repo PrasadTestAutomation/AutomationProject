@@ -33,6 +33,9 @@ public class LoginPageFactory {
     @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
     private WebElement loginErrorMsg;
 
+    @FindBy(xpath = "//a[@href='/logout']")
+    private WebElement logoutButton;
+
     public WebElement getValidateLoginInfo() {
         return validateLoginInfo;
     }
@@ -58,4 +61,10 @@ public class LoginPageFactory {
     public WebElement getInvalidLoggedInText() {
         return loginErrorMsg;
     }
+
+    public WebElement getLogoutButton() {
+        return logoutButton;
+    }
+
+
 }

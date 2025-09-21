@@ -33,4 +33,16 @@ public class LoginSteps {
         System.out.println("Incorrect details validated successfully");
 
     }
+
+    @When("user clicks on logout button")
+    public void userClicksOnLogoutButton() throws InterruptedException {
+        loginpage.clickLogoutButton();
+    }
+
+
+    @Then("user should be able to logout successfully")
+    public void userShouldBeAbleToLogoutSuccessfully() {
+        loginpage.validateLogout();
+        System.out.println("Logout validated successfully");
+    }
 }

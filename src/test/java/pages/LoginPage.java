@@ -46,4 +46,15 @@ public class LoginPage {
         Assert.assertEquals(invalidLoginText,LoginPage.Constants.LOGIN_ERROR_MSG,"error message not presen");
     }
 
+    public void clickLogoutButton() throws InterruptedException {
+        loginFactory.getLogoutButton().click();
+        Thread.sleep(3000);
+    }
+
+    public void validateLogout() {
+        String LoginInfo = loginFactory.getValidateLoginInfo().getText();
+        Assert.assertEquals(LoginInfo, LoginPage.Constants.LOGIN_INFO,"New User SignUp! not visible");
+    }
+
+
 }
